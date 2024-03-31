@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("clone"){
             steps{echo "Cloning Stage"
-            git url:"https://github.com/diabloexodia/TODO-APP.git" , branch:"main"}
+            git url:"https://github.com/zakaullah075/TODO-APP.git" , branch:"main"}
             
         }   
         stage("build"){
@@ -32,7 +32,7 @@ pipeline{
              steps{
             echo "Deploying the container"
              sh "docker-compose down && docker-compose up -d"
-            //sh "docker run -d -p 5000:5000 diabloexodia/todoapp:latest"
+            //sh "docker run -d -p 5000:5000 zakaullah075/todoapp:latest"
         }
          }
         
